@@ -1,1 +1,71 @@
+fun main() {
+    
+      // Étape 1 — Créer la variable weekday
+  val weekday = "Friday" 
+    
+     // Étape 2 — Afficher l’intitulé avec string interpolation
+    println("On $weekday, the opening hours are:")
+    
+     // Étape 3A — Solution avec if-else-if
+   if (weekday == "Monday") {
+     println("8 AM to 12 PM")
+    
+   } else if (weekday == "Tuesday") {
+     println("8 AM to 6 PM")
+    
+   } else if (weekday == "Wednesday") {
+     println("8 AM to 6 PM")
+    
+   } else if (weekday == "Thursday") {
+     println("8 AM to 6 PM")
+    
+  } else if (weekday == "Friday") {
+     println("8 AM to 9 PM")
+    
+  } else if (weekday == "Saturday") {
+     println("9 AM to 4 PM")
+    
+  } else if (weekday == "Sunday") {
+     println("8 AM to 4 PM")
+    
+  } else {
+     println("Unknown day")
+  }
+ 
+    // Étape 3B — Alternative avec when
+ 
+   when (weekday) {
 
+        "Monday" -> println("8 AM to 12 PM")
+
+        "Tuesday", "Wednesday", "Thursday" -> println("8 AM to 6 PM")
+
+        "Friday" -> println("8 AM to 9 PM")
+
+        "Saturday" -> println("9 AM to 4 PM")
+
+        "Sunday" -> println("8 AM to 4 PM")
+
+        else -> println("Unknown day")
+    }
+   
+  // Étape 4 — Tester avec un autre jour
+    val testDay = "Monday"
+
+    println("On $testDay, the opening hours are:")
+
+    when (testDay) {
+
+        "Monday" -> println("8 AM to 12 PM")
+
+        "Tuesday", "Wednesday", "Thursday" -> println("8 AM to 6 PM")
+
+        "Friday" -> println("8 AM to 9 PM")
+
+        "Saturday" -> println("9 AM to 4 PM")
+
+        "Sunday" -> println("8 AM to 4 PM")
+
+        else -> println("Unknown day")
+    }
+}
