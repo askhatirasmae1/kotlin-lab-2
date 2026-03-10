@@ -1,5 +1,6 @@
-fun main() {
-    
+ fun main() {
+   
+  // Task 1 — Afficher les horaires
       // Étape 1 — Créer la variable weekday
   val weekday = "Friday" 
     
@@ -68,4 +69,25 @@ fun main() {
 
         else -> println("Unknown day")
     }
+    
+ // Task 2 — Afficher “open now” ou “closed now”
+        //  Étape 1 — Créer weekday et hour
+         
+     val hour = 20  // 20 = 8 PM
+    
+       // Étape 2 — Calculer isOpen avec when (expression)
+    val isOpen = when (weekday) {
+    "Monday" -> hour in 8..12
+    "Tuesday", "Wednesday", "Thursday" -> hour in 8..18
+    "Friday" -> hour in 8..21
+    "Saturday" -> hour in 9..16
+    "Sunday" -> hour in 8..16
+    else -> false
+   }
+      // Étape 3 — Afficher le statut
+      if (isOpen) {
+    println("Little Lemon is open now")
+  } else {
+    println("Little Lemon is closed now")
+ }
 }
